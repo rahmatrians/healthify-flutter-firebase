@@ -5,6 +5,9 @@ import 'package:rflutter_alert/rflutter_alert.dart';
 import 'makanan_sehat.dart';
 
 class Beranda extends StatefulWidget {
+  final String nama, email;
+
+  Beranda({this.nama, this.email});
   @override
   _BerandaState createState() => _BerandaState();
 }
@@ -44,7 +47,7 @@ class _BerandaState extends State<Beranda> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Hai, Armin",
+                          "Hai, ${widget.nama}",
                           textAlign: TextAlign.left,
                           style: TextStyle(
                               color: Colors.white,

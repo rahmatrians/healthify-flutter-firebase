@@ -19,6 +19,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  // Future<void> _pressLogin() async {
+  //   final googleUser = await GoogleSignIn().signIn();
+  //   print(googleUser.email);
+  // }
   @override
   Widget build(BuildContext context) {
     return new Scaffold(

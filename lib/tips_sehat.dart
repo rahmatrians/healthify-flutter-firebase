@@ -47,7 +47,7 @@ class _TipsListState extends State<TipsList> {
                       .delete();
                 },
                 child: Column(children: [
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
                   Container(
                     padding:
                         EdgeInsets.only(top: 3, bottom: 3, left: 12, right: 12),

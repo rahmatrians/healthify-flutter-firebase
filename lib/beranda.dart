@@ -9,6 +9,10 @@ import 'akun.dart';
 import 'tentang_kami.dart';
 
 class Beranda extends StatefulWidget {
+  final String nama, email, foto;
+
+  Beranda({this.nama, this.email, this.foto});
+
   @override
   _BerandaState createState() => _BerandaState();
 }
@@ -18,16 +22,15 @@ class _BerandaState extends State<Beranda> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
-      // appBar: new AppBar(
-      //   backgroundColor: Color(0xff1DBAB5),
-      //   title: Text("Healthify"),
-      // ),
       body: Column(
         children: [
           SizedBox(height: 30),
           GestureDetector(
             onTap: () => Navigator.of(context).push(new MaterialPageRoute(
-                builder: (BuildContext context) => new Akun())),
+                builder: (BuildContext context) => new Akun(
+                    nama: widget.nama,
+                    email: widget.email,
+                    foto: widget.foto))),
             child: Container(
               decoration: BoxDecoration(
                   color: Color(0xff1DBAB5),
@@ -37,18 +40,16 @@ class _BerandaState extends State<Beranda> {
               margin: EdgeInsets.all(10),
               child: new Row(
                 children: [
-                  Image.asset(
-                    "images/profilePict.png",
-                    height: 70,
-                  ),
-                  Padding(padding: EdgeInsets.only(right: 10)),
+                  ClipOval(
+                      child: Image.network(widget.foto, width: 70, height: 70)),
+                  Padding(padding: EdgeInsets.only(right: 20)),
                   Container(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Hai, Armin",
+                          "Hai, ${widget.nama}",
                           textAlign: TextAlign.left,
                           style: TextStyle(
                               color: Colors.white,
@@ -57,7 +58,7 @@ class _BerandaState extends State<Beranda> {
                         ),
                         SizedBox(height: 5),
                         Text(
-                          "Bagaimana kondusu tubuhmu?",
+                          "Bagaimana kondisimu saat ini?",
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             color: Colors.white,
