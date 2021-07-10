@@ -21,6 +21,78 @@ class _BerandaState extends State<Beranda> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color(0xff1DBAB5),
+        title: Text("Info Layanan"),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            UserAccountsDrawerHeader(
+              accountName: Text("${widget.nama}"),
+              accountEmail: Text("${widget.email}"),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (BuildContext context) => new Akun(
+                      nama: widget.nama,
+                      email: widget.email,
+                      foto: widget.foto))),
+              child: ListTile(
+                title: Text(
+                  // leading
+                  "Profil Akun",
+                  style: TextStyle(color: Colors.black),
+                ),
+              ),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (BuildContext context) => new MakananList())),
+              child: ListTile(
+                title: Text(
+                  // leading
+                  "Makanan Sehat",
+                  style: TextStyle(color: Colors.black),
+                ),
+              ),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (BuildContext context) => new TipsList())),
+              child: ListTile(
+                title: Text(
+                  // leading
+                  "Tips Sehat",
+                  style: TextStyle(color: Colors.black),
+                ),
+              ),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (BuildContext context) => new infoLayanan())),
+              child: ListTile(
+                title: Text(
+                  // leading
+                  "Info Layanan",
+                  style: TextStyle(color: Colors.black),
+                ),
+              ),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (BuildContext context) => new TentangKami())),
+              child: ListTile(
+                title: Text(
+                  // leading
+                  "Tentang Kami",
+                  style: TextStyle(color: Colors.black),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
       backgroundColor: Colors.grey[200],
       body: Column(
         children: [
@@ -84,21 +156,21 @@ class _BerandaState extends State<Beranda> {
                                     new MakananList())),
                         child: Container(
                           padding: EdgeInsets.all(10),
-                          width: 140,
+                          width: 190,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8),
                           ),
                           margin: EdgeInsets.all(10),
                           child: Column(children: [
-                            SizedBox(height: 10),
+                            SizedBox(height: 30),
                             Image.asset(
                               "images/healthy-food.png",
                               height: 60,
                             ),
                             SizedBox(height: 20),
                             Text("Makanan Sehat"),
-                            SizedBox(height: 20),
+                            SizedBox(height: 35),
                           ]),
                         ),
                       ),
@@ -109,21 +181,21 @@ class _BerandaState extends State<Beranda> {
                                     new TipsList())),
                         child: Container(
                           padding: EdgeInsets.all(10),
-                          width: 140,
+                          width: 190,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8),
                           ),
                           margin: EdgeInsets.all(10),
                           child: Column(children: [
-                            SizedBox(height: 10),
+                            SizedBox(height: 30),
                             Image.asset(
                               "images/blog.png",
                               height: 60,
                             ),
                             SizedBox(height: 20),
                             Text("Tips Sehat"),
-                            SizedBox(height: 20),
+                            SizedBox(height: 35),
                           ]),
                         ),
                       ),
@@ -138,21 +210,21 @@ class _BerandaState extends State<Beranda> {
                                     new TentangKami())),
                         child: Container(
                           padding: EdgeInsets.all(10),
-                          width: 140,
+                          width: 190,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8),
                           ),
                           margin: EdgeInsets.all(10),
                           child: Column(children: [
-                            SizedBox(height: 10),
+                            SizedBox(height: 30),
                             Image.asset(
                               "images/information.png",
                               height: 60,
                             ),
                             SizedBox(height: 20),
                             Text("Tentang Kami"),
-                            SizedBox(height: 20),
+                            SizedBox(height: 35),
                           ]),
                         ),
                       ),
@@ -163,21 +235,21 @@ class _BerandaState extends State<Beranda> {
                                     new infoLayanan())),
                         child: Container(
                           padding: EdgeInsets.all(10),
-                          width: 140,
+                          width: 190,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8),
                           ),
                           margin: EdgeInsets.all(10),
                           child: Column(children: [
-                            SizedBox(height: 10),
+                            SizedBox(height: 30),
                             Image.asset(
                               "images/phone.png",
                               height: 60,
                             ),
                             SizedBox(height: 20),
                             Text("Info Layanan"),
-                            SizedBox(height: 20),
+                            SizedBox(height: 35),
                           ]),
                         ),
                       ),
