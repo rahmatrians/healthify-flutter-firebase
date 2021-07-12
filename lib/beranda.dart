@@ -23,7 +23,7 @@ class _BerandaState extends State<Beranda> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xff1DBAB5),
-        title: Text("Info Layanan"),
+        title: Text("Healthify"),
       ),
       drawer: Drawer(
         child: ListView(
