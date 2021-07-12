@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'main.dart';
 
 class Akun extends StatefulWidget {
   final String nama, email, foto;
@@ -10,6 +12,10 @@ class Akun extends StatefulWidget {
 }
 
 class _AkunState extends State<Akun> {
+  Future<void> _signOut() async {
+    await FirebaseAuth.instance.signOut();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,7 +72,13 @@ class _AkunState extends State<Akun> {
                     fontSize: 16,
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  _signOut();
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => MyApp()),
+                  );
+                },
               ),
               SizedBox(height: 10),
             ],

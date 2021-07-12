@@ -156,7 +156,7 @@ class _BerandaState extends State<Beranda> {
                                     new MakananList())),
                         child: Container(
                           padding: EdgeInsets.all(10),
-                          width: 190,
+                          width: MediaQuery.of(context).size.width * 0.45,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8),
@@ -181,7 +181,7 @@ class _BerandaState extends State<Beranda> {
                                     new TipsList())),
                         child: Container(
                           padding: EdgeInsets.all(10),
-                          width: 190,
+                          width: MediaQuery.of(context).size.width * 0.45,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8),
@@ -210,7 +210,7 @@ class _BerandaState extends State<Beranda> {
                                     new TentangKami())),
                         child: Container(
                           padding: EdgeInsets.all(10),
-                          width: 190,
+                          width: MediaQuery.of(context).size.width * 0.45,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8),
@@ -235,7 +235,7 @@ class _BerandaState extends State<Beranda> {
                                     new infoLayanan())),
                         child: Container(
                           padding: EdgeInsets.all(10),
-                          width: 190,
+                          width: MediaQuery.of(context).size.width * 0.45,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8),
