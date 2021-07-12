@@ -61,7 +61,7 @@ class AddTipsState extends State<AddTips> {
                 ),
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: "Ketikkan Nama Makanan di sini...",
+                  hintText: "Ketikkan Nama Tips di sini...",
                 ),
               ),
               SizedBox(

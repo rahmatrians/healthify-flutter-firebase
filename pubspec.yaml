@@ -32,6 +32,7 @@ dependencies:
   # firebase_core: ^0.4.0+9
   firebase_auth:
   google_sign_in:
+  flutter_automation:
 
   # google_sign_in: ^5.0.1
   font_awesome_flutter:
